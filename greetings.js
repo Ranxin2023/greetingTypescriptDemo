@@ -23,3 +23,15 @@ var greetStudents = function (stu) {
 };
 console.log("This is greenStudents function:");
 console.log(greetStudents(student));
+var CarClass = /** @class */ (function () {
+    function CarClass(logo, age) {
+        this.logo = logo;
+        this.age = age;
+    }
+    CarClass.prototype.display = function () {
+        console.log("My car's logo is ".concat(this.logo, " and I have used ").concat(this.age, " years"));
+    };
+    return CarClass;
+}());
+var car1 = new CarClass("Toyota", 10);
+car1.display();

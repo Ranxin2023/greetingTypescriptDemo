@@ -19,13 +19,28 @@ for(var i=0; i<ages.length; i++){
     process.stdout.write(`${ages[i]}\t`)
 }
 console.log()
-interface Student{
+interface StudentInterface{
     name:string,
     age:number
 }
-const student:Student={name:"John", age:25}
-const greetStudents=(stu:Student):string=>{
+const student:StudentInterface={name:"John", age:25}
+const greetStudents=(stu:StudentInterface):string=>{
     return `Hello, ${stu.name}! I am ${stu.age} years old`;
 }
 console.log("This is greenStudents function:")
 console.log(greetStudents(student))
+
+class CarClass{
+    logo:string;
+    age:number;
+    constructor(logo:string, age:number){
+        this.logo=logo
+        this.age=age
+    }
+    display():void{
+        console.log(`My car's logo is ${this.logo} and I have used ${this.age} years`)
+    }
+}
+
+var car1=new CarClass("Toyota", 10)
+car1.display()
