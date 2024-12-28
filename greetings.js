@@ -81,3 +81,20 @@ process.stdout.write("Unique Ages are:");
 ageSet.forEach(function (age) {
     process.stdout.write("".concat(age, "\t"));
 });
+var arr = [1, 2, 3, 2, 3, 2, 1, 4];
+var arrCount = {};
+for (var _c = 0, arr_1 = arr; _c < arr_1.length; _c++) {
+    var num = arr_1[_c];
+    arrCount[num] = (arrCount[num] || 0) + 1;
+}
+for (var key in arrCount) {
+    console.log("the frequency of ".concat(key, " is ").concat(arrCount[key]));
+}
+var words = ["def", "zoo", "banana", "fiber", "foo", "moon", "banana", "abc"];
+words.sort(function (a, b) { return b.localeCompare(a); });
+console.log("Sorted words are:");
+for (var _d = 0, words_1 = words; _d < words_1.length; _d++) {
+    var word = words_1[_d];
+    process.stdout.write("".concat(word, "\t"));
+}
+console.log();

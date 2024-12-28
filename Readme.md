@@ -2,6 +2,6 @@
 ## Running
 When running, run the following commands
 ```sh
-ts greetings.ts
+tsc greetings.ts
 node greetings.js
 ```

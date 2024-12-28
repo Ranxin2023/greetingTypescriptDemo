@@ -89,3 +89,19 @@ process.stdout.write("Unique Ages are:")
 ageSet.forEach(age => {
     process.stdout.write(`${age}\t`);
 });
+let arr:number[]=[1, 2, 3, 2, 3, 2, 1, 4]
+let arrCount:Record<number, number>={}
+for(const num of arr){
+    arrCount[num]=(arrCount[num]||0)+1
+}
+for(const key in arrCount){
+    console.log(`the frequency of ${key} is ${arrCount[key]}`)
+}
+
+let words:string[]=["def", "zoo","banana", "fiber", "foo", "moon", "banana", "abc"]
+words.sort((a, b)=>b.localeCompare(a))
+console.log("Sorted words in descending order are:")
+for(const word of words){
+    process.stdout.write(`${word}\t`);
+}
+console.log()
